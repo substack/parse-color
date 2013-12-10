@@ -14,6 +14,16 @@ output:
 
 ```
 $ node example/parse.js '#ffa500'
+{ rgb: [ 255, 165, 0 ],
+  hsl: [ 39, 100, 50 ],
+  hsv: [ 39, 100, 100 ],
+  cmyk: [ 0, 35, 100, 0 ],
+  keyword: 'orange',
+  hex: '#ffa500',
+  rgba: [ 255, 165, 0, 1 ],
+  hsla: [ 39, 100, 50, 1 ],
+  hsva: [ 39, 100, 100, 1 ],
+  cmyka: [ 0, 35, 100, 0, 1 ] }
 ```
 
 ```
