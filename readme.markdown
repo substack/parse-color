@@ -94,3 +94,14 @@ $ node example/parse.js 'x'
   hex: undefined }
 ```
 
+# install
+
+With [npm](https://npmjs.org) do:
+
+```
+npm install parse-color
+```
+
+# license
+
+MIT
