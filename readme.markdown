@@ -3,6 +3,10 @@
 parse a [css color string](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
 plus `hsv()` and `cmyk()` strings
 
+[![testling badge](https://ci.testling.com/substack/parse-color.png)](https://ci.testling.com/substack/parse-color)
+
+[![build status](https://secure.travis-ci.org/substack/parse-color.png)](http://travis-ci.org/substack/parse-color)
+
 # example
 
 ``` js
