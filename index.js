@@ -28,7 +28,7 @@ module.exports = function (cstr) {
     }
     else if (/^#[A-Fa-f0-9]+$/.test(cstr)) {
         conv = convert.rgb;
-        parts = cstr.replace(/^#/,'')
+        parts = cstr.replace(/^#/, '')
             .split(/(..)/)
             .filter(Boolean)
             .map(function (x) { return parseInt(x, 16) })
