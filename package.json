@@ -1,6 +1,6 @@
 {
   "name": "parse-color",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "parse a css color string (plus hsv and cmyk) into an object",
   "main": "index.js",
   "dependencies": {
