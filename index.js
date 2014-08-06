@@ -27,11 +27,19 @@ module.exports = function (cstr) {
         conv[base] = function () { return parts };
     }
     else if (/^#[A-Fa-f0-9]+$/.test(cstr)) {
+        var base = cstr.replace(/^#/,'');
+        var size = base.length;
         conv = convert.rgb;
-        parts = cstr.replace(/^#/,'')
-            .split(/(..)/)
-            .filter(Boolean)
-            .map(function (x) { return parseInt(x, 16) })
+        parts = base.split(size === 3 ? /(.)/ : /(..)/);
+        parts = parts.filter(Boolean)
+            .map(function (x) {
+                if (size === 3) {
+                    return parseInt(x + x, 16);
+                }
+                else {
+                    return parseInt(x, 16)
+                }
+            })
         ;
         alpha = 1;
         conv.rgb = function () { return parts };
