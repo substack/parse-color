@@ -2,7 +2,7 @@ var parse = require('../');
 var test = require('tape');
 
 test('readme examples', function (t) {
-    t.plan(4);
+    t.plan(6);
     t.deepEqual(parse('#ffa500'), {
         rgb: [ 255, 165, 0 ],
         hsl: [ 39, 100, 50 ],
@@ -14,6 +14,30 @@ test('readme examples', function (t) {
         hsla: [ 39, 100, 50, 1 ],
         hsva: [ 39, 100, 100, 1 ],
         cmyka: [ 0, 35, 100, 0, 1 ]
+    });
+    t.deepEqual(parse('#333'), {
+        rgb: [ 51, 51, 51 ],
+        hsl: [ 0, 0, 20 ],
+        hsv: [ 0, 0, 20 ],
+        cmyk: [ 0, 0, 0, 80 ],
+        keyword: undefined,
+        hex: '#333333',
+        rgba: [ 51, 51, 51, 1 ],
+        hsla: [ 0, 0, 20, 1 ],
+        hsva: [ 0, 0, 20, 1 ],
+        cmyka: [ 0, 0, 0, 80, 1 ],
+    });
+    t.deepEqual(parse('#f98'), {
+        rgb: [ 255, 153, 136 ],
+        hsl: [ 9, 100, 77 ],
+        hsv: [ 9, 47, 100 ],
+        cmyk: [ 0, 40, 47, 0 ],
+        keyword: undefined,
+        hex: '#ff9988',
+        rgba: [ 255, 153, 136, 1 ],
+        hsla: [ 9, 100, 77, 1 ],
+        hsva: [ 9, 47, 100, 1 ],
+        cmyka: [ 0, 40, 47, 0, 1 ],
     });
     t.deepEqual(parse('lime'), {
         rgb: [ 0, 255, 0 ],
